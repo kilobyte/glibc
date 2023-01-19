@@ -95,6 +95,7 @@ int
 __vasprintf_internal (char **result_ptr, const char *format, va_list args,
 		      unsigned int mode_flags)
 {
+  *result_ptr = NULL;
   struct __printf_buffer_asprintf buf;
   __printf_buffer_init (&buf.base, buf.direct, array_length (buf.direct),
 			__printf_buffer_mode_asprintf);
